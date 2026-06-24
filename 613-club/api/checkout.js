@@ -74,7 +74,7 @@ export default async function handler(req, res) {
       shipping_address_collection: {
         allowed_countries: ["CA", "US", "FR", "IL"],
       },
-      // ✅ Tes options de livraison et pickup Stripe sont maintenant actives ici :
+      // ✅ NOUVEAUX TARIFS DE LIVRAISON - Mis à jour avec UPS
       shipping_options: [
         {
           shipping_rate_data: {
@@ -100,7 +100,7 @@ export default async function handler(req, res) {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
-              amount: 1495,
+              amount: 1295,
               currency: "cad",
             },
             display_name: "Montréal",
@@ -120,27 +120,7 @@ export default async function handler(req, res) {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
-              amount: 3495,
-              currency: "cad",
-            },
-            display_name: "États-Unis",
-            delivery_estimate: {
-              minimum: {
-                unit: "business_day",
-                value: 3,
-              },
-              maximum: {
-                unit: "business_day",
-                value: 7,
-              },
-            },
-          },
-        },
-        {
-          shipping_rate_data: {
-            type: "fixed_amount",
-            fixed_amount: {
-              amount: 3695,
+              amount: 2495,
               currency: "cad",
             },
             display_name: "Canada",
@@ -160,7 +140,27 @@ export default async function handler(req, res) {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
-              amount: 5995,
+              amount: 2495,
+              currency: "cad",
+            },
+            display_name: "États-Unis",
+            delivery_estimate: {
+              minimum: {
+                unit: "business_day",
+                value: 3,
+              },
+              maximum: {
+                unit: "business_day",
+                value: 7,
+              },
+            },
+          },
+        },
+        {
+          shipping_rate_data: {
+            type: "fixed_amount",
+            fixed_amount: {
+              amount: 5495,
               currency: "cad",
             },
             display_name: "International",
