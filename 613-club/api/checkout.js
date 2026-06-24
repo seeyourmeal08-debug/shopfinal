@@ -140,7 +140,7 @@ export default async function handler(req, res) {
           shipping_rate_data: {
             type: "fixed_amount",
             fixed_amount: {
-              amount: 2495,
+              amount: 2695,
               currency: "cad",
             },
             display_name: "États-Unis",
